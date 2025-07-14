@@ -9,8 +9,11 @@ function win() {
     win_streak++
     win_circles[win_streak - 1].style.backgroundColor = "lightGreen";
 
-    if (win_streak == 3)
-        alert("Y:ou won nigga!");
+    if (win_streak == 3) {
+		setTimeout(() => {
+		        alert("You won nigga!");
+		}, 1500);
+	}
 }
 
 apply_btn.addEventListener("click", () => {
