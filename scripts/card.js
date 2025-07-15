@@ -7,7 +7,7 @@ const possible_cards = [
     "spades"
 ];
 
-const cards_on_hand = [];
+var cards_on_hand = [];
 
 var ans = 0;
 
@@ -15,8 +15,16 @@ function deal() {
     for (let i = 0; i < cards_arr.length; i++) {
         /* adding the event listener to each card using this loop, for better performance and lower memory user */
 
-        cards_arr[i].classList.add(i);
-        cards_arr[i].classList.add("off");
+        if (cards_arr[i].classList[2] == "on") {
+            cards_arr[i].classList.toggle("on");
+            cards_arr[i].classList.toggle("off");;
+        }
+        else {
+            cards_arr[i].classList.add(i);
+            cards_arr[i].classList.add("off");
+        }
+
+        console.log(`class list of the ${i+1}th card: ${cards_arr[i].classList}`); // debug line, remove me later
 
         /* adding the event listener for subtraction and addition for applying */
 
@@ -36,8 +44,9 @@ function deal() {
                 ans -= cards_on_hand[cards_arr[i].classList[1]];
             }
 
-            console.log(cards_arr[i].classList); // debug line, remove me later
+            console.log(`class list of clicked card: ${cards_arr[i].classList}`); // debug line, remove me later
             console.log(`ans = ${ans}`); // debug line, remove me later
+            console.log("--------------------------"); // debug line, remove me later
         })
 
         const num = Math.floor(Math.random() * 10 + 1);
