@@ -9,17 +9,16 @@ function next_round() {
 	cards_on_hand.length = 0;
 	ans = 0;
 
-	randomize();
-	deal(false);
-
 	for (let i = 0; i < cards_arr.length; i++) {
 		if (cards_arr[i].classList[2] == "on") {
-			cards_arr[i].classList.toggle("on");
-			cards_arr[i].classList.toggle("off");
+			cards_arr[i].remove();
 		}
 		
 		cards_arr[i].style.translate = "0 0";
 	}
+
+	randomize();
+	deal(false);
 }
 
 function win() {
