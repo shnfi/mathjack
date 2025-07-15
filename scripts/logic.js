@@ -41,4 +41,9 @@ apply_btn.addEventListener("click", () => {
         console.log("U Lost!");
 });
 
-pass_btn.addEventListener("click", () => {});
+pass_btn.addEventListener("click", () => {
+	randomize();
+
+	cards_arr[Math.floor(Math.random() * cards_arr.length)].remove();
+	cards_arr[Math.floor(Math.random() * cards_arr.length)].remove();
+});
