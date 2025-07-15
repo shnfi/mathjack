@@ -72,12 +72,12 @@ body {
 }
 
 .apply_btn {
-    background-color: green;
+    background-color: rgba(81, 179, 81, 0.359);
     outline: 3px solid lightgreen;
 }
 
 .pass_btn {
-    background-color: red;
+    background-color: rgba(164, 79, 79, 0.408);
     outline: 3px solid pink;
 }
 
