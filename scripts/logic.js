@@ -41,12 +41,18 @@ apply_btn.addEventListener("click", () => {
     if (ans == number.innerHTML)
         win();
     else
-        console.log("U Lost!");
+		alert("U Lost!");
 });
 
 pass_btn.addEventListener("click", () => {
-	randomize();
+	if (document.querySelectorAll(".card").length > 2) {
+		randomize();
 
-	cards_arr[Math.floor(Math.random() * cards_arr.length)].remove();
-	cards_arr[Math.floor(Math.random() * cards_arr.length)].remove();
+		const x = document.querySelectorAll(".card");
+
+		x[Math.floor(Math.random() * x.length)].remove();
+		x[Math.floor(Math.random() * x.length)].remove();
+	}
+	else 
+		alert("U Lost!");
 });
