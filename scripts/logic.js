@@ -26,9 +26,12 @@ function win() {
     win_circles[win_streak - 1].style.backgroundColor = "lightGreen";
 
     if (win_streak == 3) {
+		apply_btn.disabled = true;
+		pass_btn.disabled = true;
+
 		setTimeout(() => {
 		    alert("You won nigga!");
-		}, 1500);
+		}, 1000);
 	}
 
 	next_round();
