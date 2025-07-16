@@ -44,15 +44,11 @@ function deal(first_round) {
     
                     ans -= cards_on_hand[cards_arr[i].classList[1]];
                 }
-    
-                console.log(`class list of clicked card: ${cards_arr[i].classList}`); // debug line, remove me later
-                console.log(`ans = ${ans}`); // debug line, remove me later
-                console.log("--------------------------"); // debug line, remove me later
             })
         }
 
         const num = Math.floor(Math.random() * 10 + 1);
-        cards_arr[i].style.backgroundImage = `url(assets/${num}_of_${possible_cards[Math.floor(Math.random() * possible_cards.length)]}.png)`;
+        cards_arr[i].style.backgroundImage = `url(assets/pics/${num}_of_${possible_cards[Math.floor(Math.random() * possible_cards.length)]}.png)`;
         cards_on_hand.push(num);
     }
 

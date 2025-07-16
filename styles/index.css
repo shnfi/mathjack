@@ -1,6 +1,6 @@
 @font-face {
     font-family: font;
-    src: url(../assets/font.TTF);
+    src: url(../assets/fonts/font.TTF);
 }
 
 * {
@@ -12,7 +12,7 @@
 }
 
 body {
-    background-image: url(../assets/table.jpg);
+    background-image: url(../assets/pics/table.jpg);
     background-size: cover cover;
     background-position: 0 0;
     overflow: hidden;
