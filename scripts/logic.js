@@ -11,14 +11,23 @@ function next_round() {
 
 	for (let i = 0; i < cards_arr.length; i++) {
 		if (cards_arr[i].classList[2] == "on") {
-			cards_arr[i].remove();
+			cards_arr[i].style.transition = "1s";
+			cards_arr[i].style.translate = "-2000px -3rem";
 		}
-		
-		cards_arr[i].style.translate = "0 0";
 	}
 
-	randomize();
-	deal(false);
+	setTimeout(() => {
+		for (let i = 0; i < cards_arr.length; i++) {
+			if (cards_arr[i].classList[2] == "on") {
+				cards_arr[i].remove();
+			}
+		
+			cards_arr[i].style.translate = "0 0";
+		}
+
+		randomize();
+		deal(false);
+	}, 850);
 }
 
 function win() {
