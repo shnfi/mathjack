@@ -31,17 +31,23 @@ function win() {
 
 		setTimeout(() => {
 		    alert("You won nigga!");
+			location.reload();
 		}, 1000);
 	}
 
 	next_round();
 }
 
+function lost() {
+	alert("You Lost!");
+	location.reload();
+}
+
 apply_btn.addEventListener("click", () => {
     if (ans == number.innerHTML)
         win();
     else
-		alert("U Lost!");
+		lost();
 });
 
 pass_btn.addEventListener("click", () => {
